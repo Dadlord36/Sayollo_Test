@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: ScriptableDependenciesInstaller
   m_EditorClassIdentifier: 
   mainResourcesHub: {fileID: 11400000, guid: 527c1e33b65e5a048908ddd1dc701934, type: 2}
+  storagePathsSource: {fileID: 11400000, guid: fa2e0a63cf0e8974eb54919c5bab5bd0, type: 2}

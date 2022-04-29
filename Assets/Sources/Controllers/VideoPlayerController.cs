@@ -25,9 +25,9 @@ namespace Controllers
         
         public void PlayVideo()
         {
+            _videoPlayer.Prepare();
             _videoPlayer.Play();
         }
-
-
+        
     }
 }

@@ -3,13 +3,18 @@ using ScriptableDataModels.Interfaces;
 using UnityEngine;
 using Zenject;
 
-[CreateAssetMenu(fileName = "ScriptableDependenciesInstaller", menuName = "Installers/ScriptableDependenciesInstaller")]
-public class ScriptableDependenciesInstaller : ScriptableObjectInstaller<ScriptableDependenciesInstaller>
+namespace DI_Installers
 {
-    [SerializeField]
-    private MainResourcesHub mainResourcesHub;
-    public override void InstallBindings()
+    [CreateAssetMenu(fileName = "ScriptableDependenciesInstaller", menuName = "Installers/ScriptableDependenciesInstaller")]
+    public class ScriptableDependenciesInstaller : ScriptableObjectInstaller<ScriptableDependenciesInstaller>
     {
-        Container.Bind<IMainResourcesHub>().To<MainResourcesHub>().FromInstance(mainResourcesHub).AsSingle();
+        [SerializeField] private MainResourcesHub mainResourcesHub;
+        [SerializeField] private StoragePathsSource storagePathsSource;
+
+        public override void InstallBindings()
+        {
+            Container.Bind<IMainResourcesHub>().To<MainResourcesHub>().FromInstance(mainResourcesHub).AsSingle();
+            Container.Bind<IStoragePathsSource>().To<StoragePathsSource>().FromInstance(storagePathsSource).AsSingle();
+        }
     }
 }

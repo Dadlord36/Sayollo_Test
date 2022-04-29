@@ -6,11 +6,15 @@ using Zenject;
 
 namespace Views
 {
-    public class MainView : MonoBehaviour
+    public sealed class MainView : MonoBehaviour
     {
-        public event Action PlayVideoFromInternetButtonClicked;
+        public event Action PlayVideoStreamClicked;
+        public event Action DownloadAndSaveClicked;
+        public event Action LoadAndPlayClicked;
 
-        [SerializeField] private Button playVideoFromInternetButton;
+        [SerializeField] private Button playVideoStreamButton;
+        [SerializeField] private Button downloadAndSaveButton;
+        [SerializeField] private Button loadAndPlayButton;
         [SerializeField] private RawImage planeToProjectVideoOnto;
 
         [Inject]
@@ -19,19 +23,33 @@ namespace Views
             planeToProjectVideoOnto.texture = mainResourcesHub.VideoStreamRenderTexture;
         }
 
-        protected void OnPlayVideoFromInternetButtonClicked()
+        private void OnPlayVideoFromInternetButtonClicked()
         {
-            PlayVideoFromInternetButtonClicked?.Invoke();
+            PlayVideoStreamClicked?.Invoke();
         }
 
         private void OnEnable()
         {
-            playVideoFromInternetButton.onClick.AddListener(OnPlayVideoFromInternetButtonClicked);
+            playVideoStreamButton.onClick.AddListener(OnPlayVideoFromInternetButtonClicked);
+            downloadAndSaveButton.onClick.AddListener(OnDownloadAndSaveClicked);
+            loadAndPlayButton.onClick.AddListener(OnLoadAndPlayClicked);
         }
 
         private void OnDisable()
         {
-            playVideoFromInternetButton.onClick.RemoveListener(OnPlayVideoFromInternetButtonClicked);
+            playVideoStreamButton.onClick.RemoveListener(OnPlayVideoFromInternetButtonClicked);
+            downloadAndSaveButton.onClick.RemoveListener(OnDownloadAndSaveClicked);
+            loadAndPlayButton.onClick.RemoveListener(OnLoadAndPlayClicked);
+        }
+
+        private void OnDownloadAndSaveClicked()
+        {
+            DownloadAndSaveClicked?.Invoke();
+        }
+
+        private void OnLoadAndPlayClicked()
+        {
+            LoadAndPlayClicked?.Invoke();
         }
     }
 }

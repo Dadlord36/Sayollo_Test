@@ -16,21 +16,20 @@ namespace REST_API
         public SayolloTestAPIProvider()
         {
             _webClient = new HttpClient { BaseAddress = new Uri("https://6u3td6zfza.execute-api.us-east-2.amazonaws.com/prod/") };
-            _webClient.DefaultRequestHeaders.Accept.Clear();
-            _webClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            WebClient.DefaultRequestHeaders.Accept.Clear();
+            WebClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
         ~SayolloTestAPIProvider()
         {
-            _webClient.CancelPendingRequests();
-            _webClient.Dispose();
+            WebClient.CancelPendingRequests();
         }
 
         public async Task<string> GetVideoUrl()
         {
             try
             {
-                using var result = await _webClient.GetAsync("ad/vast").ConfigureAwait(false);
+                using var result = await WebClient.GetAsync("ad/vast").ConfigureAwait(false);
                 if (!result.IsSuccessStatusCode)
                 {
                     throw new HttpRequestException(result.ReasonPhrase);
@@ -46,5 +45,11 @@ namespace REST_API
                 throw;
             }
         }
+
+        #region Properties
+
+        public HttpClient WebClient => _webClient;
+
+        #endregion
     }
 }

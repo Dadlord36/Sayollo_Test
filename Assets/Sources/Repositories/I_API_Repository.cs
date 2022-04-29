@@ -4,6 +4,8 @@ namespace Repositories
 {
     public interface I_API_Repository
     {
-        Task<string> VideoSource { get; }
+        Task<string> InternetVideoSource { get; }
+        string LocalVideoSource { get; }
+        Task TryDownloadAndSaveVideoFile();
     }
 }
