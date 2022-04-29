@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c42baaf3fbc4156be4e42583047cc45, type: 3}
+  m_Name: MainResourcesHub
+  m_EditorClassIdentifier: 
+  videoStreamRenderTexture: {fileID: 8400000, guid: 3f154dc9cc8cdc842adb2aa648f76ed6, type: 2}
