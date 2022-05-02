@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Controllers.Interfaces;
+using Repositories.Interfaces;
 using REST_API.Interfaces;
 using ScriptableDataModels.Interfaces;
 using Structures;
@@ -10,7 +11,7 @@ using Zenject;
 
 namespace Repositories
 {
-    public class API_Repository : I_API_Repository
+    public class VideoRepository : IVideoRepository
     {
         [Inject] private readonly I_API_Provider _apiProvider;
         [Inject] private readonly IFileDownloader _fileDownloader;

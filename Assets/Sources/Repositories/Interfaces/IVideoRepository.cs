@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
 
-namespace Repositories
+namespace Repositories.Interfaces
 {
-    public interface I_API_Repository
+    public interface IVideoRepository
     {
         Task<string> InternetVideoSource { get; }
         string LocalVideoSource { get; }

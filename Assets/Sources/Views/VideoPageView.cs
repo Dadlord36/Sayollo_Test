@@ -6,7 +6,7 @@ using Zenject;
 
 namespace Views
 {
-    public sealed class MainView : MonoBehaviour
+    public sealed class VideoPageView : MonoBehaviour
     {
         public event Action PlayVideoStreamClicked;
         public event Action DownloadAndSaveClicked;

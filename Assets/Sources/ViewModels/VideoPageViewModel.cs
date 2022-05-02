@@ -2,32 +2,33 @@
 using System.IO;
 using Controllers.Interfaces;
 using Repositories;
+using Repositories.Interfaces;
 using UnityEngine;
 using Views;
 
 namespace ViewModels
 {
-    public class MainViewModel
+    public class VideoPageViewModel
     {
-        private readonly I_API_Repository _apiRepository;
+        private readonly IVideoRepository _videoRepository;
         private readonly IVideoPlayerController _videoPlayerController;
-        private readonly MainView _mainView;
+        private readonly VideoPageView _videoPageView;
 
-        public MainViewModel(MainView mainView, IVideoPlayerController videoPlayerController, I_API_Repository apiRepository)
+        public VideoPageViewModel(VideoPageView videoPageView, IVideoPlayerController videoPlayerController, IVideoRepository videoRepository)
         {
-            _apiRepository = apiRepository;
+            _videoRepository = videoRepository;
             _videoPlayerController = videoPlayerController;
-            _mainView = mainView;
-            mainView.PlayVideoStreamClicked += PlayVideoFromInternet;
-            mainView.DownloadAndSaveClicked += DownloadAndSaveVideo;
-            mainView.LoadAndPlayClicked += PlayVideoFromStorage;
+            _videoPageView = videoPageView;
+            videoPageView.PlayVideoStreamClicked += PlayVideoFromInternet;
+            videoPageView.DownloadAndSaveClicked += DownloadAndSaveVideo;
+            videoPageView.LoadAndPlayClicked += PlayVideoFromStorage;
         }
         
         private async void DownloadAndSaveVideo()
         {
             try
             {
-                await _apiRepository.TryDownloadAndSaveVideoFile();
+                await _videoRepository.TryDownloadAndSaveVideoFile();
             }
             catch (Exception e)
             {
@@ -36,26 +37,26 @@ namespace ViewModels
             }
         }
 
-        ~MainViewModel()
+        ~VideoPageViewModel()
         {
-            _mainView.PlayVideoStreamClicked -= PlayVideoFromInternet;
+            _videoPageView.PlayVideoStreamClicked -= PlayVideoFromInternet;
         }
 
         private void PlayVideoFromStorage()
         {
-            if (!File.Exists(_apiRepository.LocalVideoSource))
+            if (!File.Exists(_videoRepository.LocalVideoSource))
             {
                 Debug.Log("Video file is not Exists!");
                 return;
             }
-            _videoPlayerController.SourceUrl = _apiRepository.LocalVideoSource;
+            _videoPlayerController.SourceUrl = _videoRepository.LocalVideoSource;
         }
 
         private async void PlayVideoFromInternet()
         {
             try
             {
-                _videoPlayerController.SourceUrl = await _apiRepository.InternetVideoSource;
+                _videoPlayerController.SourceUrl = await _videoRepository.InternetVideoSource;
                 Debug.Log("Video source Url was retrieved successfully");
                 _videoPlayerController.PlayVideo();
             }

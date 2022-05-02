@@ -4,18 +4,138 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74e7ca84-9a2f-4f6c-bd3b-172a7bc1d990" name="Changes" comment="" />
+    <list default="true" id="74e7ca84-9a2f-4f6c-bd3b-172a7bc1d990" name="Changes" comment="UserData and ItemPurchasing pages are added.">
+      <change afterPath="$PROJECT_DIR$/Assets/Content/Pages/PurchasingPage.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Content/Pages/PurchasingPage.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Content/Pages/VideoPage.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Content/Pages/VideoPage.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Content/Requests.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Content/ScriptableDI/AppInstaller.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Content/ScriptableDI/AppInstaller.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Content/ScriptableDI/RequestsProcessorsInstaller.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Content/ScriptableDI/RequestsProcessorsInstaller.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Content/UI_Elements.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Content/UI_Elements/ItemView.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Content/UI_Elements/ItemView.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Content/UI_Elements/LabeledField.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Content/UI_Elements/LabeledField.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Content/UI_Elements/LabeledInputField.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Content/UI_Elements/LabeledInputField.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Content/UI_Elements/UserInfoCard.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Content/UI_Elements/UserInfoCard.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Content/Views/ItemsView.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Content/Views/ItemsView.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JsonDotNet.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/AOT.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/AOT/Newtonsoft.Json.XML" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/AOT/Newtonsoft.Json.XML.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/AOT/Newtonsoft.Json.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/AOT/Newtonsoft.Json.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Standalone.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.XML" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.XML.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Windows.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Windows/Newtonsoft.Json.XML" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Windows/Newtonsoft.Json.XML.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Windows/Newtonsoft.Json.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JsonDotNet/Assemblies/Windows/Newtonsoft.Json.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JsonDotNet/Documentation.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JsonDotNet/Documentation/Json Net for Unity 2.0.1.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JsonDotNet/Documentation/Json Net for Unity 2.0.1.pdf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JsonDotNet/JsonDotNet201Source.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JsonDotNet/JsonDotNet201Source.zip.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JsonDotNet/link.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/JsonDotNet/link.xml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/DI_Installers/AppInstaller.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/DI_Installers/AppInstaller.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/DI_Installers/RequestsProcessorsInstaller.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/DI_Installers/RequestsProcessorsInstaller.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/DI_Installers/UserDataPageDependenciesInstaller.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/DI_Installers/UserDataPageDependenciesInstaller.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Models/JSON.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Models/JSON/ItemPurchacingResponce.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Models/JSON/ItemPurchacingResponce.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Models/JSON/ProductModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Models/JSON/ProductModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Models/JSON/UserInfoModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Models/JSON/UserInfoModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/REST_API/RequestProcessors.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/REST_API/RequestProcessors/BaseRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/REST_API/RequestProcessors/BaseRequest.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/REST_API/RequestProcessors/Get.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/REST_API/RequestProcessors/Post.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/REST_API/RequestProcessors/Post/PurchaseItemPostRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/REST_API/RequestProcessors/Post/PurchaseItemPostRequest.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/REST_API/RequestProcessors/Post/UserActionPostRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/REST_API/RequestProcessors/Post/UserActionPostRequest.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Repositories/Interfaces.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Repositories/Interfaces/IItemsRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Repositories/Interfaces/IItemsRepository.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Repositories/ItemsRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Repositories/ItemsRepository.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/UI_Elements.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/UI_Elements/LabeledInputField.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/UI_Elements/LabeledInputField.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/UI_Elements/LabeledTextField.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/UI_Elements/LabeledTextField.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/ViewModels/ItemsViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/ViewModels/ItemsViewModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/ViewModels/UserInfoCardViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/ViewModels/UserInfoCardViewModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Views/ItemView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Views/ItemView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Views/ItemsPageView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Views/ItemsPageView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Views/UserInfoCardView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Views/UserInfoCardView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Toolkit.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Toolkit/PanelSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Toolkit/PanelSettings.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Toolkit/UnityThemes.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Sayollo_Test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sayollo_Test/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Pages/MainPage.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Pages/MainPage.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Views/MainView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Views/MainView.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/DI_Installers/BehaviourDependenciesInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/DI_Installers/VideoPageDependenciesInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/DI_Installers/BehaviourDependenciesInstaller.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/DI_Installers/VideoPageDependenciesInstaller.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Repositories/API_Repository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Repositories/VideoRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Repositories/API_Repository.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Repositories/VideoRepository.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Repositories/I_API_Repository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Repositories/Interfaces/IVideoRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Repositories/I_API_Repository.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Repositories/Interfaces/IVideoRepository.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/ViewModels/MainViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/ViewModels/VideoPageViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/ViewModels/MainViewModel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/ViewModels/VideoPageViewModel.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Views/MainView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Views/VideoPageView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Views/MainView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Views/VideoPageView.cs.meta" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6073cf49ed704e958b8a66d540dea94846a800/82/f4bd3372/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6073cf49ed704e958b8a66d540dea94846a800/8b/4596a45b/AsyncMethodBuilderCore.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6a3432483bd0456580c3760d9412ad663400/83/b766fd6e/UnityWebRequestTexture.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7593d37b52bf47a288e315bb6112df45be00/6b/d7a4083d/UnityWebRequestAsyncOperation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7593d37b52bf47a288e315bb6112df45be00/dc/e399ade6/UnityWebRequest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/823fb226a3f9439cb41fdcb61f9c86a1157600/27/4f9cf9e4/AsyncOperation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/823fb226a3f9439cb41fdcb61f9c86a1157600/e8/2811f02c/YieldInstruction.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/83adde9fd7164016977f91e2e3260b217e00/ca/896fa9cb/VideoSource.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/97722d3abc9f4cf69f9e21e6770081b362c00/0e/7833618f/JsonConverter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/696aa455fd6736cddaf4da626e8bac73eb7a3f4de26241c24169a89f925074/System.Net.Http.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Sources/DI_Installers/ToolsDependenciesInstaller.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="28QCKzia6FzHUSmCfCXMj412J8h" />
   <component name="ProjectLevelVcsManager">
@@ -33,7 +153,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;rider.run.widget.enabled.cache&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -63,10 +183,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="20312">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="20312" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -89,13 +209,44 @@
       <workItem from="1651223895946" duration="397000" />
       <workItem from="1651224310675" duration="10589000" />
       <workItem from="1651236773791" duration="304000" />
-      <workItem from="1651237145347" duration="1604000" />
+      <workItem from="1651237145347" duration="2957000" />
+      <workItem from="1651250213279" duration="8938000" />
+      <workItem from="1651305266405" duration="176000" />
+      <workItem from="1651305461084" duration="365000" />
+      <workItem from="1651412257931" duration="983000" />
+      <workItem from="1651479761974" duration="9575000" />
+      <workItem from="1651489936823" duration="3025000" />
     </task>
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="development" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="UserData and ItemPurchasing pages are added." />
+    <option name="LAST_COMMIT_MESSAGE" value="UserData and ItemPurchasing pages are added." />
   </component>
 </project>
