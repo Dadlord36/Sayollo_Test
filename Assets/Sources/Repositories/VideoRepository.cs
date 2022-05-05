@@ -18,11 +18,11 @@ namespace Repositories
         [Inject] private readonly IStorageController _storageController;
         [Inject] private readonly IStoragePathsSource _storagePathsSource;
 
-        public async Task TryDownloadAndSaveVideoFile()
+        public async Task TryDownloadAndSaveVideoFile(IProgress<float> progress)
         {
             try
             {
-                byte[] byteData = await _fileDownloader.TryDownloadFile();
+                byte[] byteData = await _fileDownloader.TryDownloadFile(progress);
                 await TrySaveVideoFile(byteData).ConfigureAwait(false);
             }
             catch (Exception e)

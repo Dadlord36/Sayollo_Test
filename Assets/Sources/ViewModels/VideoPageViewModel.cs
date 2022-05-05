@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using Controllers.Interfaces;
-using Repositories;
 using Repositories.Interfaces;
 using UnityEngine;
 using Views;
@@ -23,12 +22,12 @@ namespace ViewModels
             videoPageView.DownloadAndSaveClicked += DownloadAndSaveVideo;
             videoPageView.LoadAndPlayClicked += PlayVideoFromStorage;
         }
-        
+
         private async void DownloadAndSaveVideo()
         {
             try
             {
-                await _videoRepository.TryDownloadAndSaveVideoFile();
+                await _videoRepository.TryDownloadAndSaveVideoFile(_videoPageView.VideoLoadingProgressReflector);
             }
             catch (Exception e)
             {
@@ -49,6 +48,7 @@ namespace ViewModels
                 Debug.Log("Video file is not Exists!");
                 return;
             }
+
             _videoPlayerController.SourceUrl = _videoRepository.LocalVideoSource;
         }
 

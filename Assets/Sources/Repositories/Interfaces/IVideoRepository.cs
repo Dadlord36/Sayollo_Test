@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 
 namespace Repositories.Interfaces
 {
@@ -6,6 +7,6 @@ namespace Repositories.Interfaces
     {
         Task<string> InternetVideoSource { get; }
         string LocalVideoSource { get; }
-        Task TryDownloadAndSaveVideoFile();
+        Task TryDownloadAndSaveVideoFile(IProgress<float> progress);
     }
 }

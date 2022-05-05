@@ -1,5 +1,6 @@
 ﻿using System;
 using ScriptableDataModels.Interfaces;
+using UI_Elements;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -16,6 +17,7 @@ namespace Views
         [SerializeField] private Button downloadAndSaveButton;
         [SerializeField] private Button loadAndPlayButton;
         [SerializeField] private RawImage planeToProjectVideoOnto;
+        [SerializeField] private ProgressBar progressBar;
 
         [Inject]
         private void Initialize(IMainResourcesHub mainResourcesHub)
@@ -51,5 +53,7 @@ namespace Views
         {
             LoadAndPlayClicked?.Invoke();
         }
+
+        public IProgress<float> VideoLoadingProgressReflector => progressBar;
     }
 }
