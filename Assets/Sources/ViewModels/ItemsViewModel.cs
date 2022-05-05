@@ -1,9 +1,12 @@
 ﻿using System;
+using System.IO;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Models.JSON;
 using Repositories.Interfaces;
 using REST_API.Interfaces;
 using UnityEngine;
+using Utilities;
 using Views;
 using Zenject;
 
@@ -15,6 +18,8 @@ namespace ViewModels
         private readonly ItemView _itemView;
         [Inject] private I_API_Provider _provider;
         private readonly TaskFactory mainThreadTaskFactory;
+
+        private HttpClient WebClient => _provider.WebClient;
 
         public ItemsViewModel(IItemsRepository itemsRepository, ItemsPageView itemsPageView, ItemView itemView)
         {
@@ -29,7 +34,11 @@ namespace ViewModels
             try
             {
                 ProductResponseModel itemData = await _itemsRepository.GetPresentItem().ConfigureAwait(false);
-                byte[] result = await _provider.WebClient.GetByteArrayAsync(itemData.ItemImage).ConfigureAwait(false);
+                
+                using var bytesStream = new MemoryStream();
+                await WebClient.DownloadAsync(itemData.ItemImage, bytesStream, _itemView.ImageDownloadProgressReflector).ConfigureAwait(false);
+
+                byte[] result = bytesStream.ToArray();
 
                 await mainThreadTaskFactory.StartNew(delegate
                 {

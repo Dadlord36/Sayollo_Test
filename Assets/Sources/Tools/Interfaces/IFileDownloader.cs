@@ -1,9 +1,10 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 
 namespace Tools.Interfaces
 {
     public interface IFileDownloader
     {
-        Task<byte[]> TryDownloadFile();
+        Task<byte[]> TryDownloadFile(IProgress<float> progress);
     }
 }

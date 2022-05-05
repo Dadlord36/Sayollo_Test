@@ -11,6 +11,7 @@ namespace Views
         [SerializeField] private LabeledTextField currency;
         [SerializeField] private LabeledTextField currencySign;
         [SerializeField] private RawImage image;
+        [SerializeField] private ProgressBar progressBar;
 
         private Texture2D _rawImageTexture;
 
@@ -33,6 +34,8 @@ namespace Views
         {
             set => currencySign.Field = value;
         }
+
+        public IProgress<float> ImageDownloadProgressReflector => progressBar;
 
         public byte[] Icon
         {
