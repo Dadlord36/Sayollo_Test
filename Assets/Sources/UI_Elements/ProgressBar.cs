@@ -9,25 +9,36 @@ namespace UI_Elements
     public class ProgressBar : MonoBehaviour, IProgress<float>
     {
         [SerializeField] private MPImage image;
-        private float progressState;
+        private readonly Progress<float> _progress;
 
-        private void Update()
-        {
-            ProgressState = progressState;
-        }
 
-        public void Report(float value)
+        private ProgressBar()
         {
-            progressState = value;
+            _progress = new Progress<float>(delegate(float newValue)
+            {
+                try
+                {
+                    TasksFactories.MainThreadTaskFactory.StartNew(delegate { ProgressState = newValue; })
+                        .ContinueWith(delegate(Task task) { task.Dispose(); });
+                }
+                catch (Exception e)
+                {
+                    Debug.LogException(e);
+                    throw;
+                }
+            });
         }
 
         private float ProgressState
         {
-            set
-            {
-                if (Math.Abs(image.fillAmount - progressState) < 0.01f) return;
-                image.fillAmount = value;
-            }
+            set => image.fillAmount = value;
+        }
+
+
+        public void Report(float value)
+        {
+            Debug.Log($"ProgressReport: {value.ToString()}");
+            (_progress as IProgress<float>).Report(value);
         }
     }
 }

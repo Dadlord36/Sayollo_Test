@@ -4,6 +4,6 @@ namespace Factories.TaskFactories
 {
     public static class TasksFactories
     {
-        public static TaskFactory MainThreadTaskFactory { get; } = new(TaskScheduler.FromCurrentSynchronizationContext());
+        public static TaskFactory MainThreadTaskFactory { get; set; }
     }
 }
