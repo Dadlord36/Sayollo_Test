@@ -8,7 +8,7 @@ namespace Utilities
 {
     public static class HttpClientExtensions
     {
-        public static async Task DownloadAsync(this HttpClient client, string requestUri, Stream destination, IProgress<float> progress = null,
+        public static async ValueTask DownloadAsync(this HttpClient client, string requestUri, Stream destination, IProgress<float> progress = null,
             CancellationToken cancellationToken = default)
         {
             // Get the http headers first to examine the content length
